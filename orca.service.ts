@@ -80,6 +80,7 @@ export class OrcaService {
     ).publicKey;
 
     console.log("🚀 whirlPoolPubkey:", whirlPoolPubkey.toBase58());
+    // NOTE: Need to handle retry in here, will have the case can not get the whirlpool.
     const whirlpool = await this.whirlpoolClient.getPool(whirlPoolPubkey);
 
     const quote = await swapQuoteByInputToken(

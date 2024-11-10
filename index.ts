@@ -6,10 +6,6 @@ import { OrcaService } from "./orca.service";
 
 dotenv.config();
 
-// Environment variables must be defined before script execution
-// ANCHOR_PROVIDER_URL=https://api.devnet.solana.com
-// ANCHOR_WALLET=wallet.json
-
 const connection = new Connection(
   process.env.ANCHOR_PROVIDER_URL as string,
   "confirmed"
